@@ -71,5 +71,9 @@ Route::get('/xml-to-json', function () {
     $json = json_encode($xml);
     $array = json_decode($json, true);
 
-    return response()->json($array);
+    //return response()->json($array);
+    return view('frontend.preferencias', ['libros' => $array['libro']]);
+
+
+
 });

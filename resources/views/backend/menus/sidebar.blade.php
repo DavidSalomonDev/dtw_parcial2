@@ -39,8 +39,13 @@
 
                     </ul>
                  </li>
+                 <li class="nav-item">
+                    <a href="{{ url('/xml-to-json') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-book nav-icon"></i>
+                        <p>Ver Libros</p>
+                    </a>
+                </li>
                 @endcan
-
 
 
 
