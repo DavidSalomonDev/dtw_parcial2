@@ -10,8 +10,9 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
-
-
+//soap controller 
+use App\Http\Controllers\SoapController;
+//
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
 
@@ -57,6 +58,19 @@ Route::post('/admin/editar-perfil/actualizar', [PerfilController::class, 'editar
 Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('no.permisos.index');
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
+
+//vista vista donde el usuario pueda sumar o multiplicar dos números.
+//Route::get('/operaciones', [SoapController::class, 'index'])
+  //   ->name('operaciones.index');
+
+//Route::post('/operar', [SoapController::class, 'operar'])
+   //  ->name('operar');
+
+// --- OPERACIONES (solo para usuarios logueados) ---
+Route::middleware(['auth'])->group(function () {
+    Route::get('/operaciones', [SoapController::class, 'index'])->name('operaciones.index');
+    Route::post('/operar', [SoapController::class, 'operar'])->name('operar');
+});
 
 // --- TEST XML
 
