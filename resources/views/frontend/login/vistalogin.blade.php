@@ -26,7 +26,7 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url({{ asset('images/fondo3.jpg') }});
+            background-image: url("{{ asset('images/fondo3.jpg') }}");
         }
 
         .demo-container {
@@ -94,7 +94,7 @@
         </div>
     </div>
 </div>
-
+ 
 <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/toastr.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/axios.min.js') }}" type="text/javascript"></script>
