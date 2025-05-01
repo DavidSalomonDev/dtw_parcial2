@@ -29,6 +29,12 @@
                                 <p>Rol y Permisos</p>
                             </a>
                         </li>
+<li class="nav-item">
+    <a href="{{ route('admin.roles.index') }}" target="frameprincipal" class="nav-link">
+        <i class="far fa-circle nav-icon"></i>
+        <p>Rol y Permisos</p>
+    </a>
+</li>
 
                         <li class="nav-item">
                             <a href="{{ route('admin.permisos.index') }}" target="frameprincipal" class="nav-link">
