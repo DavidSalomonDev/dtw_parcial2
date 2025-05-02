@@ -50,12 +50,16 @@
                             <p>Ver Libros</p>
                         </a>
                     </li>
+                    <!-- calculadora -->
+                    @auth
+                        <li class="nav-item">
+                            <a href="{{ route('operaciones.index') }}" class="nav-link" target="frameprincipal">
+                                <i class="nav-icon fas fa-calculator"></i>
+                                <p>Calculadora SOAP</p>
+                            </a>
+                        </li>
+                    @endauth
                 @endcan
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('libros.index') }}">
-                        <i class="bi bi-book"></i> Libros
-                    </a>
-                </li>
 
 
             </ul>

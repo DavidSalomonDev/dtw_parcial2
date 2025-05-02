@@ -11,7 +11,7 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 
-//soap controller 
+//soap controller
 use App\Http\Controllers\SoapController;
 //
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
@@ -62,10 +62,10 @@ Route::get('/admin/dashboard', [DashboardController::class, 'vistaDashboard'])->
 
 //vista vista donde el usuario pueda sumar o multiplicar dos números.
 //Route::get('/operaciones', [SoapController::class, 'index'])
-  //   ->name('operaciones.index');
+//   ->name('operaciones.index');
 
 //Route::post('/operar', [SoapController::class, 'operar'])
-   //  ->name('operar');
+//  ->name('operar');
 
 // --- OPERACIONES (solo para usuarios logueados) ---
 Route::middleware(['auth'])->group(function () {
@@ -92,3 +92,5 @@ Route::get('/xml-to-json', function () {
 
 
 });
+
+Route::get('/libros', [LibroController::class, 'index'])->name('libros.index');
